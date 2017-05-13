@@ -44,7 +44,9 @@ def runBrowser(url, confirmationNumber, firstName, lastName):
 	print(itineraryForm)
 	browser.submit_form(itineraryForm)
 	#Check for Second Button
-	
+	documentsForm = browser.select("body input [class~=swa-button swa-button_primary]")
+	print("documents form:")
+	print(documentsForm)
 	#Scan for success
 	if success:
 		print("Thank you for checking in using sw_checkin.py. Enjoy your flight! :)")
